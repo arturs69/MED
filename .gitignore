@@ -1,0 +1,42 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.env
+.env.*
+coverage/
+dist/
+build/
+.cache/
+.next/
+.nuxt/
+.svelte-kit/
+.DS_Store
+*.log
+
+# Django
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.sqlite3
+media/
+staticfiles/
+*.pot
+*.mo
+*.log
+local_settings.py
+.envrc
+venv/
+ENV/
+*.egg-info/
+.eggs/
+.mypy_cache/
+.pytest_cache/
+
+# Editors
+.vscode/
+.idea/
+

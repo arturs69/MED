@@ -15,13 +15,6 @@ Hospital Ordination is a starter repository for coordinating hospital operations
    ```
 3. Open `http://localhost:3000` in your browser. Use the form to add new ordinations and see them appear in the list. Data is saved to `data/appointments.json`.
 
-### Run the automated checks
-Use Node's built-in test runner to exercise the API endpoints end-to-end:
-
-```bash
-npm test
-```
-
 ## Project layout
 - `backend/server.js` — Node server with `/api/appointments` endpoints and static file serving.
 - `frontend/index.html` — Single-page interface to create and view ordinations.

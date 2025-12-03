@@ -1,19 +1,33 @@
 # Hospital Ordination
 
-Hospital Ordination is a starter repository for coordinating hospital operations with a combined Node.js and Django stack. The goal is to support service orchestration, scheduling, and integration with clinical systems.
+Hospital Ordination is a starter repository for coordinating hospital operations with a lightweight Node.js demo that lets you schedule and review ordinations (appointments).
 
 ## Stack
-- **Backend**: Django for API endpoints and administrative tooling.
-- **Frontend/Services**: Node.js ecosystem for client interfaces, background workers, or gateway services.
-- **Testing**: pytest for Python components and jest for Node-based services.
+- **Backend**: A minimal Node.js server using the native `http` module (no external packages) to serve JSON endpoints and static assets.
+- **Frontend**: Static HTML, CSS, and vanilla JavaScript for creating and listing ordinations.
+- **Data**: JSON file storage at `data/appointments.json` for persistence on the server.
 
-## Getting Started
-1. Create and activate a Python virtual environment for Django components.
-2. Install Python dependencies with `pip install -r requirements.txt` (file to be added later).
-3. Install Node dependencies with `npm install` or `yarn` when package manifests are available.
-4. Set environment variables (e.g., database credentials) via `.env` files ignored from version control.
+## Running locally
+1. Ensure Node.js is installed (version 18+ recommended for `crypto.randomUUID`).
+2. From the repository root, start the server:
+   ```bash
+   npm start
+   ```
+3. Open `http://localhost:3000` in your browser. Use the form to add new ordinations and see them appear in the list. Data is saved to `data/appointments.json`.
 
-## Repository Setup Notes
-- Add service-specific folders (e.g., `backend/` for Django and `services/` for Node) as development progresses.
-- Configure CI to run linting and tests across both ecosystems before merging to `main`.
-- Apply branch protections requiring pull request reviews and passing status checks when hosted on GitHub.
+### Run the automated checks
+Use Node's built-in test runner to exercise the API endpoints end-to-end:
+
+```bash
+npm test
+```
+
+## Project layout
+- `backend/server.js` — Node server with `/api/appointments` endpoints and static file serving.
+- `frontend/index.html` — Single-page interface to create and view ordinations.
+- `data/appointments.json` — Saved ordination data for the demo environment.
+
+## Next steps
+- Replace JSON file storage with a real database (e.g., PostgreSQL or SQLite).
+- Add authentication/authorization for staff accounts.
+- Deploy to DigitalOcean App Platform or Droplets once you are ready for hosting.

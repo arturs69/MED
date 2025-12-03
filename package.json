@@ -1,0 +1,18 @@
+{
+  "name": "med",
+  "version": "1.0.0",
+  "description": "Simple ordination scheduling demo with a Node.js backend and static frontend.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "ordination",
+    "appointments",
+    "node"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
